@@ -39,7 +39,7 @@ class BinarizedLinear(nn.Linear):
 
     def __init__(self, *kargs, **kwargs):
         super(BinarizedLinear, self).__init__(*kargs, **kwargs)
-        self.binarization = Binarization(min=min_weight, max=max_weight)
+        self.binarization = Binarization(min=-1, max=1)
         self.min_weight = -1
         self.max_weight = +1
 
